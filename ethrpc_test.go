@@ -60,7 +60,7 @@ func (s *EthRPCTestSuite) paramsEqual(body []byte, expected string) {
 }
 
 func (s *EthRPCTestSuite) SetupSuite() {
-	s.rpc = NewEthRPC("http://127.0.0.1:8545", WithHttpClient(http.DefaultClient), WithLogger(nil), WithDebug(false))
+	s.rpc = NewEthRPC("https://http-mainnet.hecochain.com", WithHttpClient(http.DefaultClient), WithLogger(nil), WithDebug(false))
 
 	httpmock.Activate()
 }
